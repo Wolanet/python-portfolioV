@@ -35,4 +35,4 @@ if misfortune_number == 14:
 if misfortune_number == 15:
   misfortune_text = 'Do not count on getting any help!'
 
-print(f'{misfortune_text} \n your (mis)fortune number is: {misfortune_number}')
+print(f'{misfortune_text} \n your unlucky number is: {misfortune_number}')
