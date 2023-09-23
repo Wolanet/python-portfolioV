@@ -13,13 +13,13 @@ if misfortune_number == 3:
 if misfortune_number == 4:
   misfortune_text = 'Today you will be fired!'
 if misfortune_number == 5:
-  misfortune_text = 'You will get a speed ticket today!'
+  misfortune_text = 'You will get a speeding ticket today!'
 if misfortune_number == 6:
-  misfortune_text = 'Your close friend will betray you'
+  misfortune_text = 'Your close friend will betray you.'
 if misfortune_number == 7:
   misfortune_text = 'Give up already!'
 if misfortune_number == 8:
-  misfortune_text = 'You will forget to pay taxes'
+  misfortune_text = 'You will forget to pay taxes.'
 if misfortune_number == 9:
   misfortune_text = 'The FBI wants to interrogate you...'
 if misfortune_number == 10:
@@ -35,4 +35,4 @@ if misfortune_number == 14:
 if misfortune_number == 15:
   misfortune_text = 'Do not count on getting any help!'
 
-print(f'{misfortune_text} \n your unlucky number is: {misfortune_number}')
+print(f'{misfortune_text} \nYour unlucky number is: {misfortune_number}')
