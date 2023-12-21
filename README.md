@@ -1,11 +1,13 @@
 <h2>🐍 Python portfolio </h2> 
 I'm learning Python from zero. My goal is to develop tools useful for the Cybersecurity field. <br />
 This repo will have all the projects I've done or I've worked on, it will be updated regularly and it'll include some simple beginner projects/scripts as well. <br />
-_____
+<br />
+
+__________________
 
 <br />
 
-# 1. IP addresses allow/remove
+## [1] AllowIP.py
  In a given organization, access to restricted content is controlled with an allow list of ip addresses. The "allow_list.txt" file identifies these IP addresses, and a separate remove list identifies IP addresses that 
  should no longer have access to the restricted content. <br />
  I created this script to automate updating the "allow_list.txt" of IP addresses and removing the addresses that should no longer have access.
