@@ -14,7 +14,7 @@ __________________
  just change it in the code along with the path to where it's stored. I've also added a simple regex method for searching for specific patterns.
 
 <h3> 🔷 Documentation </h3>
- The core of this script is within the <b>update_list</b> function, defined right at the beginning. <br />
+ The core of this script is within the <b>update_file</b> function, defined right at the beginning. <br />
  The <b>with statement</b> is used with the .open( ) function in read mode (indicated by "r") to open the allow list file. This is so that I can have access the the file in Python and then start interacting with it. 
  While you can open files without the <b>with statement</b>, it's good practice to use it as it will help manage the resources by closing the file after exiting the statement.
 
