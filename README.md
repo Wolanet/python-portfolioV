@@ -7,7 +7,35 @@ __________________
 
 <br />
 
-<h2> [1] AllowIP.py </h2>
+<h2> [1] ScapyScan.py </h2>
+
+ [Scapy](https://scapy.net/) is a Python-based packet manipulation program and library. It is able to forge and decode packets in many protocols, send them on the wire, capture them, store 
+ or read them using pcap files, and much more. 
+ In this script we will perform a Port scan (TCP SYN scan), a DNS scan and lastly we'll use the sniff ( ) function to sniff and output sniffed packets. <br />
+ This script shows just the tip of the iceberg of what you can achieve with Scapy.
+
+<h3> 🔶 Documentation </h3>
+In this script we use the sr ( ) function to create and send packets: sr( ) sends and receives packets without a custom ether() layer. <br />
+Other functions to send packets are: <br />
+- sendp( ) = sends with a custom ether() layer  <br />
+- srp( ) = sends and receives at with a custom ether() layer  <br />
+- sr1( ) = sends packets without custom ether() layer and waits for first answer  <br />
+
+It's also important to note that Scapy works with layers. Layers are individual functions stacked together with the "/" character to create packets. <br />
+Here's an example code to build a basic TCP/IP packet with "data" as the payload >>> ```packet = IP(dst="1.2.3.4") / TCP(dport=22) / "data"```
+<br />
+We can also view field's values like the source port: >>> ```packet.sport```, we can set the destination IP address: >>> ```packet[IP].dst = "127.0.0.1"```, and much more.
+<br />
+
+<h4> > Performing the scans and sniffing </h4>
+To perform a TCP SYN scan and a DNS scan we create 2 functions, and we used pre-defined ports and a pre-defined host (google DNS server). You can modify those values as you please to scan different ports or hosts. <br />
+The first function named S_scan creates and sends TCP SYN packets (by setting the TCP flag to "S"), then with a for lop it disaplys any open port found, based on the pre-defined
+ports we provide. <br />
+The second function performs a DNS scan by querying google.com, and sending packets to port 53 UDP (used for DNS). <br />
+Lastly, we sniff some packets with the same host, showcasing more capabilities of the Scapy library.
+<br /> <br />
+
+<h2> [2] AllowIP.py </h2>
  In a given organization, access to restricted content is controlled with an allow list of ip addresses. The "allow_list.txt" file identifies these IP addresses, and a separate remove list identifies IP addresses that 
  should no longer have access to the restricted content. <br />
  I created this script to automate updating the "allow_list.txt" of IP addresses and removing the addresses that should no longer have access. Keep in mind that the txt file can have any name, 
