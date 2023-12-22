@@ -1,5 +1,5 @@
 <h2>🐍 Python portfolio </h2> 
-I'm learning Python from zero. My goal is to develop tools useful for the Cybersecurity field. <br />
+I'm learning and practicing using Python. My goal is to develop tools useful for the Cybersecurity field. <br />
 This repo will have all the projects I've done or I've worked on, it will be updated regularly and it'll include some simple beginner projects/scripts as well. <br />
 <br />
 
@@ -52,7 +52,7 @@ In order to perform the cipher we use a mix of the append ( ) and join ( ) funct
 
 <h3> 🔹 Documentation </h3>
  The core of this script is within the <b>update_file</b> function, defined right at the beginning. <br />
- The <b>with statement</b> is used with the .open( ) function in read mode (indicated by "r") to open the allow list file. This is so that I can have access the the file in Python and then start interacting with it. 
+ The <b>with statement</b> is used with the .open( ) function in read mode (indicated by "r") to open the allow list file. This is so that I can have access to the file in Python and then start interacting with it. 
  While you can open files without the <b>with statement</b>, it's good practice to use it as it will help manage the resources by closing the file after exiting the statement.
 
 <h4> > Convert the string into a list, iterate through the list and update it </h4>
