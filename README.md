@@ -14,7 +14,7 @@ __________________
  In this script we will perform a Port scan (TCP SYN scan), a DNS scan and lastly we'll use the sniff ( ) function to sniff and output sniffed packets. <br />
  This script shows just the tip of the iceberg of what you can achieve with Scapy.
 
-<h3> 🔶 Documentation </h3>
+<h3> 🔸 Documentation </h3>
 In this script we use the <b>sr ( ) function</b> to create and send packets: sr( ) sends and receives packets without a custom ether() layer. <br />
 Other functions to send packets are: <br />
 - sendp( ) = sends with a custom ether() layer  <br />
@@ -34,13 +34,24 @@ The second function performs a DNS scan by querying google.com, and sending pack
 Lastly, we sniff some packets with the same host, showcasing more capabilities of the Scapy library.
 <br /> <br />
 
-<h2> [2] AllowIP.py </h2>
+<h2> [2] Caesar_cipher.py </h2>
+Caesar's cipher is one of oldest and most known <b>encryption techniques</b>. It is a type of substitution cipher in which each letter is replaced by a letter some fixed number of positions down the alphabet (the so-called "shift number"). 
+For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. <br />
+The Caesar cipher is named after Julius Caesar, who, according to history records, used it with a shift of three (A becoming D when encrypting, and D becoming A when decrypting) to protect his messages from being read and understood by the enemy. 
+
+<h3> 🔻 Documentation </h3>
+The script consists of asking the user (and taking its input) which message to encrypt or decrypt, and with what shift number. We then use a for loop to iterate through a list containing all the characters in the alphabet, and we apply
+the Caesar's cipher to the whole message, with the function we called <b>Caesar_c</b>. Lastly, we output the encrypted or decrypted message. <br />
+In order to perform the cipher we use a mix of the append ( ) and join ( ) functions.
+<br /> <br />
+
+<h2> [3] AllowIP.py </h2>
  In a given organization, access to restricted content is controlled with an allow list of ip addresses. The "allow_list.txt" file identifies these IP addresses, and a separate remove list identifies IP addresses that 
  should no longer have access to the restricted content. <br />
  I created this script to automate updating the "allow_list.txt" of IP addresses and removing the addresses that should no longer have access. Keep in mind that the txt file can have any name, 
  just change it in the code along with the path to where it's stored. I've also added a simple regex method for searching for specific patterns.
 
-<h3> 🔷 Documentation </h3>
+<h3> 🔹 Documentation </h3>
  The core of this script is within the <b>update_file</b> function, defined right at the beginning. <br />
  The <b>with statement</b> is used with the .open( ) function in read mode (indicated by "r") to open the allow list file. This is so that I can have access the the file in Python and then start interacting with it. 
  While you can open files without the <b>with statement</b>, it's good practice to use it as it will help manage the resources by closing the file after exiting the statement.
