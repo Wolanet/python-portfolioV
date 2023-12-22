@@ -4,8 +4,8 @@ This repo will have all the projects I've done or I've worked on, it will be upd
 <br />
 
 __________________
+__________________
 
-<br />
 
 <h2> [1] ScapyScan.py </h2>
 
@@ -15,15 +15,14 @@ __________________
  This script shows just the tip of the iceberg of what you can achieve with Scapy.
 
 <h3> 🔶 Documentation </h3>
-In this script we use the sr ( ) function to create and send packets: sr( ) sends and receives packets without a custom ether() layer. <br />
+In this script we use the <b>sr ( ) function</b> to create and send packets: sr( ) sends and receives packets without a custom ether() layer. <br />
 Other functions to send packets are: <br />
 - sendp( ) = sends with a custom ether() layer  <br />
 - srp( ) = sends and receives at with a custom ether() layer  <br />
-- sr1( ) = sends packets without custom ether() layer and waits for first answer  <br />
+- sr1( ) = sends packets without custom ether() layer and waits for first answer  <br /> <br />
 
-It's also important to note that Scapy works with layers. Layers are individual functions stacked together with the "/" character to create packets. <br />
-Here's an example code to build a basic TCP/IP packet with "data" as the payload >>> ```packet = IP(dst="1.2.3.4") / TCP(dport=22) / "data"```
-<br />
+It's also important to note that Scapy <b>works with layers</b>. Layers are individual functions stacked together with the "/" character to create packets. <br />
+Here's an example code to build a basic TCP/IP packet with "data" as the payload >>> ```packet = IP(dst="1.2.3.4") / TCP(dport=22) / "data"``` <br />
 We can also view field's values like the source port: >>> ```packet.sport```, we can set the destination IP address: >>> ```packet[IP].dst = "127.0.0.1"```, and much more.
 <br />
 
