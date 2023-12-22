@@ -28,9 +28,8 @@ We can also view field's values like the source port: >>> ```packet.sport```, we
 
 <h4> > Performing the scans and sniffing </h4>
 To perform a TCP SYN scan and a DNS scan we create 2 functions, and we used pre-defined ports and a pre-defined host (google DNS server). You can modify those values as you please to scan different ports or hosts. <br />
-The first function named S_scan creates and sends TCP SYN packets (by setting the TCP flag to "S"), then with a for lop it disaplys any open port found, based on the pre-defined
-ports we provide. <br />
-The second function performs a DNS scan by querying google.com, and sending packets to port 53 UDP (used for DNS). <br />
+The first function named S_scan creates and sends TCP SYN packets (by setting the TCP flag to "S"), then with a for loop it outputs any open port found, based on the pre-defined ports we provide. <br />
+The second function performs a DNS scan by querying google.com, and by sending packets to port 53 UDP (the port number used for DNS). <br />
 Lastly, we sniff some packets with the same host, showcasing more capabilities of the Scapy library.
 <br /> <br />
 
@@ -46,7 +45,7 @@ In order to perform the cipher we use a mix of the append ( ) and join ( ) funct
 <br /> <br />
 
 <h2> [3] AllowIP.py </h2>
- In a given organization, access to restricted content is controlled with an allow list of ip addresses. The "allow_list.txt" file identifies these IP addresses, and a separate remove list identifies IP addresses that 
+ Let's pretend that access to restricted content is controlled with an allow list of ip addresses. The "allow_list.txt" file identifies these IP addresses, and a separate remove list identifies IP addresses that 
  should no longer have access to the restricted content. <br />
  I created this script to automate updating the "allow_list.txt" of IP addresses and removing the addresses that should no longer have access. Keep in mind that the txt file can have any name, 
  just change it in the code along with the path to where it's stored. I've also added a simple regex method for searching for specific patterns.
@@ -58,8 +57,9 @@ In order to perform the cipher we use a mix of the append ( ) and join ( ) funct
 
 <h4> > Convert the string into a list, iterate through the list and update it </h4>
 
- In order to remove individual IP addresses from the allow list, I needed to change it's data type from string to a list. To do this I used the .split( ) method.
- By default, the .split( ) function splits the text by whitespace into list elements, but you can choose on what to base the split on if you need to perform different types of "splits". <br />
+ In order to remove individual IP addresses from the allow list, I needed to change its data type from a string to a list. To do this I used the .split( ) method.
+ By default, the .split( ) method divides the text with white spaces into list elements, but you can choose on what to base the split on if you need to perform different types of "splits", for example you can split
+ the text using a comma instead of a white space. <br />
  With the list created, I used a for loop to iterate through it, with a conditional that evaluates whether or not the loop variable element was found in the ip_addresses list. 
  Then, within that conditional, I apply the .remove( ) method to the ip_addresses list so that each IP address that is in the remove_list will be removed from ip_addresses. <br />
  Lastly, I'll use another <b>with statement</b> and open( ) but this time with a write "w" function, so that I can update the original file with the list of ip addresses. <br />
@@ -69,3 +69,4 @@ In order to perform the cipher we use a mix of the append ( ) and join ( ) funct
 
  Regular expressions (regex) are very useful for finding specific strings (like ip addresses) in e.g. a list, here as an example I'm using a regular expression (with the re.findall( ) method)
  to find all the ip addresses that start with 192.168-- and then have 6 more digits after that.
+
